@@ -1,0 +1,9 @@
+services:
+  figma:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    ports:
+      - "5173:5173"
+    tty: true
+    restart: always
