@@ -12,6 +12,7 @@ cp ./src.orig/main.tsx src
 mv ~/postcss.config.js .
 mv ~/tailwind.config.js .
 mv ~/vite.config.ts .
+mv ~/index.css src
 #mv ~/index.css ./src
 #mv ~/App.tsx ./src/App.tsx
 #mv ~/components ./src

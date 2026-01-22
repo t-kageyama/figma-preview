@@ -20,12 +20,14 @@ RUN mkdir /home/node/figma-preview
 RUN chown -R node:node /home/node
 
 COPY --chown=node:node figma-downloads/ /home/node/figma-downloads/
-COPY init-node.sh /home/node
-COPY postcss.config.js /home/node
-COPY tailwind.config.js /home/node
-COPY vite.config.ts /home/node
+COPY assets/init-node.sh /home/node
+COPY assets/postcss.config.js /home/node
+COPY assets/tailwind.config.js /home/node
+COPY assets/vite.config.ts /home/node
+COPY assets/index.css /home/node
 RUN chown node:node /home/node/*.config.js
 RUN chown node:node /home/node/vite.config.ts
+RUN chown node:node /home/node/index.css
 
 RUN chmod +x /home/node/init-node.sh
 RUN su - -c '/home/node/init-node.sh' node

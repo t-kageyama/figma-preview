@@ -2,4 +2,7 @@ node_modules
 dist
 build
 .DS_Store
+Thumbs.db
+figma-downloads/*
+!figma-downloads/.gitkeep
 

@@ -4,5 +4,9 @@ import tailwindcss from "@tailwindcss/vite"
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: '/myshop/',
   plugins: [react()],
+  server: {
+    allowedHosts: ['YOUR_HOST', 'YOUR_IP', 'localhost'],
+  }
 })
