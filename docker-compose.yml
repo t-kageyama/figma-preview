@@ -7,3 +7,6 @@ services:
       - "5173:5173"
     tty: true
     restart: always
+    #environment:
+    #  VITE_BASE: "/YOUR_APP_BASE_DIR/"
+    #  VITE_ALLOWED_HOSTS: "your,host,name,array"
