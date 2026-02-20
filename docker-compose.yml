@@ -4,6 +4,7 @@ services:
       context: .
       dockerfile: ./Dockerfile
     ports:
+      # edit following line if you want to change the port.
       - "5173:5173"
     tty: true
     restart: always

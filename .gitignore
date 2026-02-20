@@ -3,6 +3,4 @@ dist
 build
 .DS_Store
 Thumbs.db
-figma-downloads/*
-!figma-downloads/.gitkeep
-
+project.zip

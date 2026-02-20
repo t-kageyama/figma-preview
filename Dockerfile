@@ -1,10 +1,14 @@
 #
 # VERSION               0.0.1
+# author                Toru Kageyama
+# dagte                 2026-01-20
+#
 
 FROM node:22-bookworm-slim
 
 LABEL maintainer Toru Kageyama t_kageyama@hotmail.com
 
+# edit time zone and locale settings if necessary.
 ENV TZ=Asia/Tokyo
 ENV DEBCONF_NOWARNINGS=yes
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
@@ -19,7 +23,7 @@ ENV LANG=ja_JP.UTF-8
 RUN mkdir /home/node/figma-preview
 RUN chown -R node:node /home/node
 
-COPY --chown=node:node figma-downloads/ /home/node/figma-downloads/
+COPY --chown=node:node project.zip /home/node/
 COPY assets/init-node.sh /home/node
 COPY assets/postcss.config.js /home/node
 COPY assets/tailwind.config.js /home/node
