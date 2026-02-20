@@ -100,7 +100,7 @@ docker exec -u root -it "$name" sh -lc "
   cp -a \"\$NEW_SRC\"/. '$WORK/src.new'/ 2>/dev/null || true
 
   # Carry over from the old src/ if necessary.
-  for f in index.css main.ts; do
+  for f in index.css main.tsx; do
     if [ -f '$SRC_DIR/'\"\$f\" ]; then
       cp -a '$SRC_DIR/'\"\$f\" '$WORK/src.new/'\"\$f\"
     fi
